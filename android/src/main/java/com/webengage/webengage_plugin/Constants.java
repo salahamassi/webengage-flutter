@@ -34,6 +34,9 @@ public interface Constants {
         String METHOD_NAME_ON_INAPP_CLICKED = "onInAppClick";
         String METHOD_NAME_ON_INAPP_DISMISS = "onInAppDismiss";
         String METHOD_NAME_ON_INAPP_PREPARED = "onInAppPrepared";
+        String METHOD_NAME_SET_REGISTRATION_ID = "setRegistrationID";
+        String METHOD_NAME_RECEIVE = "receive";
+
     }
 
     interface PARAM {
@@ -61,6 +64,9 @@ public interface Constants {
         String EMAIL = "email";
         String WHATSAPP = "whatsapp";
         String SELECTED_ACTION_ID = "selectedActionId";
+        String TOKEN = "token";
+        String DATA = "data";
+
     }
 
 }

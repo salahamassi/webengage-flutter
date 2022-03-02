@@ -170,6 +170,12 @@ public class WebEngagePlugin implements FlutterPlugin, MethodCallHandler, Activi
                 setUserListAttribute(call, result);
                 break;
 
+            case METHOD_NAME_SET_REGISTRATION_ID:
+                setRegistrationID(call, result);
+                break;
+            case METHOD_NAME_RECEIVE:
+                receive(call, result);
+                break;
             case "getPlatformVersion":
                 result.success("Android " + android.os.Build.VERSION.RELEASE);
                 break;
@@ -367,6 +373,17 @@ public class WebEngagePlugin implements FlutterPlugin, MethodCallHandler, Activi
         else
             WebEngage.get().analytics().screenNavigated(screenName, screenData);
 
+    }
+
+    private void setRegistrationID(MethodCall call, Result result) {
+        String token = call.argument(TOKEN);
+        WebEngage.get().setRegistrationID(token);
+    }
+
+
+    private void receive(MethodCall call, Result result) {
+        Map<String, String> data = call.argument(DATA);
+        WebEngage.get().receive(data);
     }
 
     @Override

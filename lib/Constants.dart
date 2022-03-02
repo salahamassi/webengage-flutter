@@ -25,6 +25,9 @@ const String METHOD_NAME_SET_USER_MAP_ATTRIBUTE = "setUserMapAttribute";
 const String METHOD_NAME_TRACK_EVENT = "trackEvent";
 const String METHOD_NAME_TRACK_SCREEN = "trackScreen";
 
+const String METHOD_NAME_SET_REGISTRATION_ID = "setRegistrationID";
+const String METHOD_NAME_RECEIVE = "receive";
+
 const String callbackOnPushClick = "onPushClick";
 const String callbackOnPushActionClick = "onPushActionClick";
 const String callbackOnInAppShown = "onInAppShown";
