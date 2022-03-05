@@ -174,11 +174,12 @@ class WebEngagePlugin {
   }
 
   static Future<void> setRegistrationID(String token) async {
-    return await _channel.invokeMethod(METHOD_NAME_SET_REGISTRATION_ID, token);
+    return await _channel
+        .invokeMethod(METHOD_NAME_SET_REGISTRATION_ID, {TOKEN: token});
   }
 
   static Future<void> receive(Map<String, String> data) async {
-    return await _channel.invokeMethod(METHOD_NAME_RECEIVE, data);
+    return await _channel.invokeMethod(METHOD_NAME_RECEIVE, {DATA: data});
   }
 
   Future _platformCallHandler(MethodCall call) async {
